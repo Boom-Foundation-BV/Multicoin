@@ -10,7 +10,7 @@ import 'openzeppelin-solidity/contracts/token/ERC20/BurnableToken.sol';
 
 contract Multicoin is Ownable,BurnableToken {
   
-  string public constant name="MultiCoin";
+  string public constant name="Multicoin";
   string public constant symbol="MTC";
   uint8 public constant decimals=18;
   

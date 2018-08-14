@@ -5,7 +5,7 @@
 ## Multicoin Contract
 
 The Multicoin contract is a standard ERC20 token :
- - name: MultiCoin
+ - name: Multicoin
  - symbol: MTC
  - decimals: 18
  - total supply : 2 billions
@@ -20,6 +20,8 @@ Additional features :
 
 You will need NodeJS, npm , truffle and open-zepplin contracts
 
+You will need a local blockchain (like ganache) for local deployment
+
 You will also need truffle-hdwallet-provider to deploy contract with metamask and infura 
 
 ```git clone https://github.com/Multiven-Group-BV/Multicoin
@@ -28,6 +30,9 @@ npm install -g truffle
 npm install -E openzeppelin-solidity
 npm install truffle-hdwallet-provider
 truffle compile
-truffle deploy --network development
+truffle deploy
+truffle test
 ```
 
+## Ropsten 
+Address of the contract : 0x1D966850F3058151F81Cd025D859Ec5dB3Cc6421
