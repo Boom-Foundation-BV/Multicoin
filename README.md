@@ -36,3 +36,7 @@ truffle test
 
 ## Ropsten 
 Address of the contract : 0x1D966850F3058151F81Cd025D859Ec5dB3Cc6421
+
+https://ropsten.etherscan.io/address/0x1d966850f3058151f81cd025d859ec5db3cc6421
+
+https://ropsten.etherscan.io/token/0x1d966850f3058151f81cd025d859ec5db3cc6421
