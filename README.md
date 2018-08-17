@@ -24,7 +24,8 @@ You will need a local blockchain (like ganache) for local deployment
 
 You will also need truffle-hdwallet-provider to deploy contract with metamask and infura 
 
-```git clone https://github.com/Multiven-Group-BV/Multicoin
+```
+git clone https://github.com/Multiven-Group-BV/Multicoin
 cd Multicoin
 npm install -g truffle
 npm install -E openzeppelin-solidity
