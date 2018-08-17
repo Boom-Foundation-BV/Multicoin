@@ -11,7 +11,7 @@ contract TestMulticoin {
 
     uint256 expected = 2 000 000 000;
 
-    Assert.equal(meta.getBalance(tx.origin), expected, "Owner should have 10000 MetaCoin initially");
+    Assert.equal(meta.getBalance(tx.origin), expected, "Owner should have 10000 Multicoin initially");
   }
 */
   function testName() public {
