@@ -5,15 +5,7 @@ import "truffle/DeployedAddresses.sol";
 import "../contracts/Multicoin.sol";
 
 contract TestMulticoin {
-  /*
-  function testInitialBalanceUsingDeployedContract() {
-    MetaCoin meta = MetaCoin(DeployedAddresses.MetaCoin());
 
-    uint256 expected = 2 000 000 000;
-
-    Assert.equal(meta.getBalance(tx.origin), expected, "Owner should have 10000 Multicoin initially");
-  }
-*/
   function testName() public {
     Multicoin mtc = new Multicoin();
 
