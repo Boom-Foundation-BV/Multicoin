@@ -30,10 +30,10 @@ contract TestMulticoin {
 
     string memory symbol = mtc.symbol();
     
-    string memory expected = "MTC";
+    string memory expected = "MTCN";
     
     
-    Assert.equal(symbol,expected, "Symbol should be 'MTC' ");
+    Assert.equal(symbol,expected, "Symbol should be 'MTCN' ");
   }
 
   function testDecimals() public {

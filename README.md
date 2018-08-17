@@ -6,7 +6,7 @@
 
 The Multicoin contract is a standard ERC20 token :
  - name: Multicoin
- - symbol: MTC
+ - symbol: MTCN
  - decimals: 18
  - total supply : 2 billions
 
