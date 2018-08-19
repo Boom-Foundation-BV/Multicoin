@@ -36,8 +36,8 @@ truffle test
 ```
 
 ## Ropsten 
-Address of the contract : 0x76f4eF3267C32667C40F06B06068726A9F8859A9
+Address of the contract : 0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
 
-https://ropsten.etherscan.io/address/0x76f4eF3267C32667C40F06B06068726A9F8859A9
+https://ropsten.etherscan.io/address/0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
 
-https://ropsten.etherscan.io/token/0x76f4eF3267C32667C40F06B06068726A9F8859A9
+https://ropsten.etherscan.io/token/0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
