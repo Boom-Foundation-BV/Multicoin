@@ -4,16 +4,16 @@
 
 ## Multicoin Contract
 
-The Multicoin contract is a standard ERC20 token :
+The Multicoin contract is a standard ERC-20 token:
  - name: Multicoin
  - symbol: MTCN
  - decimals: 18
- - total supply : 2 billions
+ - total supply : 2 billion
 
 Additional features :
 
  - The contract has an owner.
- - Anyone can burn it's own tokens.
+ - Multiven can burn unsold tokens.
  
 
 ## Playing with the contract
