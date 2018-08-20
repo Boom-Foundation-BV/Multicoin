@@ -22,7 +22,7 @@ You will need NodeJS, npm , truffle and open-zepplin contracts
 
 You will need a local blockchain (like ganache) for local deployment and test
 
-You will also need truffle-hdwallet-provider to deploy contract with metamask and infura 
+You will also need truffle-hdwallet-provider with a metamask mnemonic and an infura api key to deploy contract on Ropsten 
 
 ### Install
 
