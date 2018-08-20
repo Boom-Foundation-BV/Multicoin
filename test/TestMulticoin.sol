@@ -7,7 +7,7 @@ import "../contracts/Multicoin.sol";
 contract TestMulticoin {
 
   function testName() public {
-    testcontract = address(this);
+    address testcontract = address(this);
 
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -20,7 +20,7 @@ contract TestMulticoin {
   }
 
   function testSymbol() public {
-    testcontract = address(this);
+    address testcontract = address(this);
   
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -33,7 +33,7 @@ contract TestMulticoin {
   }
 
   function testDecimals() public {
-    testcontract = address(this);
+    address testcontract = address(this);
 
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -46,7 +46,7 @@ contract TestMulticoin {
   }
 
   function testInitialSupply() public {
-    testcontract = address(this);
+    address testcontract = address(this);
 
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -61,7 +61,7 @@ contract TestMulticoin {
   }
 
   function testIamOwner() public {
-    testcontract = address(this);
+    address testcontract = address(this);
   
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -70,7 +70,7 @@ contract TestMulticoin {
   }
 
   function testInitialBalanceWithNewMulticoin() public {
-    testcontract = address(this);
+    address testcontract = address(this);
 
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -83,7 +83,7 @@ contract TestMulticoin {
   }
 
 function testMyBalance() public {
-    testcontract = address(this);
+    address testcontract = address(this);
 
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -95,7 +95,7 @@ function testMyBalance() public {
   }
 
   function testTransfer() public {
-    testcontract = address(this);
+    address testcontract = address(this);
   
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -109,7 +109,7 @@ function testMyBalance() public {
   }
 
   function testTransfertReception() public {
-    testcontract = address(this);
+    address testcontract = address(this);
   
     Multicoin mtc = new Multicoin(testcontract);
 
@@ -121,7 +121,7 @@ function testMyBalance() public {
   }
 
   function testBurn() public {
-    testcontract = address(this);
+    address testcontract = address(this);
   
     Multicoin mtc = new Multicoin(testcontract);
 
