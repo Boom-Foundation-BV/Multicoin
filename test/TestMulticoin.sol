@@ -7,7 +7,9 @@ import "../contracts/Multicoin.sol";
 contract TestMulticoin {
 
   function testName() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+
+    Multicoin mtc = new Multicoin(testcontract);
 
     string memory name = mtc.name();
     
@@ -18,7 +20,9 @@ contract TestMulticoin {
   }
 
   function testSymbol() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+  
+    Multicoin mtc = new Multicoin(testcontract);
 
     string memory symbol = mtc.symbol();
     
@@ -29,7 +33,9 @@ contract TestMulticoin {
   }
 
   function testDecimals() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+
+    Multicoin mtc = new Multicoin(testcontract);
 
     uint deci = mtc.decimals();
     
@@ -40,7 +46,9 @@ contract TestMulticoin {
   }
 
   function testInitialSupply() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+
+    Multicoin mtc = new Multicoin(testcontract);
 
     uint256 ini_supply = mtc.INITIAL_SUPPLY();
     
@@ -53,14 +61,18 @@ contract TestMulticoin {
   }
 
   function testIamOwner() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+  
+    Multicoin mtc = new Multicoin(testcontract);
 
     address guy = mtc.owner();
-    Assert.equal(guy, address(this), "Owner should be me");
+    Assert.equal(guy, testcontract, "Owner should be me");
   }
 
   function testInitialBalanceWithNewMulticoin() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+
+    Multicoin mtc = new Multicoin(testcontract);
 
     uint8 deci = 18;
     
@@ -71,17 +83,21 @@ contract TestMulticoin {
   }
 
 function testMyBalance() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+
+    Multicoin mtc = new Multicoin(testcontract);
 
     uint8 deci = 18;
     
     uint expected = 2000000000*(10**uint256(deci));
 
-    Assert.equal(mtc.balanceOf(address(this)), expected, "I should have 2 billions Multicoin initially");
+    Assert.equal(mtc.balanceOf(testcontract), expected, "I should have 2 billions Multicoin initially");
   }
 
   function testTransfer() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+  
+    Multicoin mtc = new Multicoin(testcontract);
 
     uint8 deci = 18;
     mtc.transfer(0x7Cee9a509b98CA22b30491330817D7Aa1677d5A2,10*(10**uint256(deci)));
@@ -93,7 +109,9 @@ function testMyBalance() public {
   }
 
   function testTransfertReception() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+  
+    Multicoin mtc = new Multicoin(testcontract);
 
     uint8 deci = 18;
     mtc.transfer(0x7Cee9a509b98CA22b30491330817D7Aa1677d5A2,10*(10**uint256(deci)));
@@ -103,7 +121,9 @@ function testMyBalance() public {
   }
 
   function testBurn() public {
-    Multicoin mtc = new Multicoin();
+    testcontract = address(this);
+  
+    Multicoin mtc = new Multicoin(testcontract);
 
     uint8 deci = 18;
     mtc.burn(10*(10**uint256(deci)));
