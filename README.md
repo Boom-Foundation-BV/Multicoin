@@ -44,12 +44,6 @@ truffle compile
 truffle deploy --multiven_address "owner_address"
 ```
 
-### Deploy on Ropsten
-(need an account with ropsten ether on it and an infura api key)
-```
-truffle deploy --multiven_address "owner_address"
-```
-
 ### Run tests
 (start local blockchain on port 8545)
 ```
