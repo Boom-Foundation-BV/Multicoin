@@ -31,8 +31,8 @@ npm install -g truffle
 npm install -E openzeppelin-solidity
 npm install truffle-hdwallet-provider
 truffle compile
-truffle deploy
-truffle test
+truffle deploy truffle test --multiven_address "owner_address"
+truffle test --multiven_address "0x0"
 ```
 
 ## Ropsten 
