@@ -13,7 +13,7 @@ The Multicoin contract is a standard ERC-20 token:
 Additional features :
 
  - The contract has an owner.
- - Multiven can burn unsold tokens.
+ - Contract owner can burn unsold tokens.
  
 
 ## Playing with the contract
