@@ -2,7 +2,8 @@ pragma solidity ^0.4.24;
 
 
 import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
-import 'openzeppelin-solidity/contracts/token/ERC20/StandardBurnableToken.sol';
+import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
+import 'openzeppelin-solidity/contracts/token/ERC20/BurnableToken.sol';
 
 /**
  * Multiven Token : Multicoin
@@ -12,7 +13,7 @@ import 'openzeppelin-solidity/contracts/token/ERC20/StandardBurnableToken.sol';
  * https://www.multiven.io/
 **/
 
-contract Multicoin is Ownable,StandardBurnableToken {
+contract Multicoin is Ownable,StandardToken,BurnableToken {
   
   string public constant name="Multicoin";
   string public constant symbol="MTCN";
@@ -30,10 +31,6 @@ contract Multicoin is Ownable,StandardBurnableToken {
   
   function burn(uint256 _value) public onlyOwner {
     super.burn(_value);
-  }
-  
-  function burnFrom(address _from, uint256 _value) public onlyOwner { 
-    super.burnFrom(_from,_value);
   }
   
 }
