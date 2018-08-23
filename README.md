@@ -24,12 +24,15 @@ You will need a local blockchain (like ganache) for local deployment and test
 
 You will also need truffle-hdwallet-provider with a metamask mnemonic and an infura api key to deploy contract on Ropsten 
 
+You will need solidity-coverage for code coverage
+
 ### Install
 
 ```
 git clone https://github.com/Multiven-Group-BV/Multicoin
 cd Multicoin
 npm install -g truffle
+npm install --save-dev solidity-coverage
 npm install -E openzeppelin-solidity
 npm install truffle-hdwallet-provider
 ```
@@ -47,7 +50,11 @@ truffle deploy --multiven_address "owner_address"
 ### Run tests
 (start local blockchain on port 8545)
 ```
-truffle test --multiven_address "0x0"
+truffle test
+```
+### Run code coverage
+```
+./node_modules/.bin/solidity-coverage
 ```
 ## Ropsten 
 Address of the contract : 0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
