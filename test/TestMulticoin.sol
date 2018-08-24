@@ -60,13 +60,13 @@ contract TestMulticoin {
     Assert.equal(ini_supply,expected, "Initial supply should be 2 billions ");
   }
 
-  function testIamOwner() public {
-    address testcontract = address(this);
+  function testOwner() public {
+    address testowner = address(0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1);
   
-    Multicoin mtc = new Multicoin(testcontract);
+    Multicoin mtc = new Multicoin(testowner);
 
     address guy = mtc.owner();
-    Assert.equal(guy, testcontract, "Owner should be me");
+    Assert.equal(guy, testowner, "Owner should be '0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1' ");
   }
 
   function testInitialBalanceWithNewMulticoin() public {
