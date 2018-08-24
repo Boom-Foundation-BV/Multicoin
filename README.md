@@ -1,6 +1,6 @@
 ![image](assets/logo-multiven.png)
 
-test
+[![Build Status](https://travis-ci.org/Multiven-Group-BV/Multicoin.svg?branch=master)](https://travis-ci.org/Multiven-Group-BV/Multicoin)
 
 # Multiven Token Smart-Contract
 
