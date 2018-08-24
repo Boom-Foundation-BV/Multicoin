@@ -3,6 +3,8 @@ sudo: required
 language: node_js
 node_js:
   - "9.4.0"
+notifications:
+  email: false
 
 matrix:
   include:
