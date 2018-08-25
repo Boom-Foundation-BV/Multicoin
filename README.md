@@ -60,8 +60,8 @@ truffle test
 npm run coverage
 ```
 ## Ropsten 
-Address of the contract : 0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
+Address of the contract : 0x20BF57B43484039355b9F24Bd1595BADe79AAf78
 
-https://ropsten.etherscan.io/address/0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
+https://ropsten.etherscan.io/address/0x20BF57B43484039355b9F24Bd1595BADe79AAf78
 
-https://ropsten.etherscan.io/token/0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
+https://ropsten.etherscan.io/token/0x20BF57B43484039355b9F24Bd1595BADe79AAf78
