@@ -24,3 +24,4 @@ install:
 
 script:
   - bash ./bin/test.sh
+  - npm run coverage && cat coverage/lcov.info | coveralls
