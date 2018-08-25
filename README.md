@@ -1,7 +1,7 @@
 ![image](assets/logo-multiven.png)
 
 [![Build Status](https://travis-ci.org/Multiven-Group-BV/Multicoin.svg?branch=master)](https://travis-ci.org/Multiven-Group-BV/Multicoin)
-
+[![Coverage Status](https://coveralls.io/repos/github/Multiven-Group-BV/Multicoin/badge.svg?branch=master)](https://coveralls.io/github/Multiven-Group-BV/Multicoin?branch=master)
 # Multiven Token Smart-Contract
 
 ## Multicoin Contract
@@ -34,6 +34,7 @@ You will need solidity-coverage for code coverage
 git clone https://github.com/Multiven-Group-BV/Multicoin
 cd Multicoin
 npm install -g truffle
+npm install -g coveralls
 npm install --save-dev solidity-coverage
 npm install -E openzeppelin-solidity
 npm install truffle-hdwallet-provider
@@ -56,7 +57,7 @@ truffle test
 ```
 ### Run code coverage
 ```
-./node_modules/.bin/solidity-coverage
+npm run coverage
 ```
 ## Ropsten 
 Address of the contract : 0x33cf0a394744174ff1e96bc9eb63f9960c024e5c
