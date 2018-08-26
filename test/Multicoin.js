@@ -7,10 +7,19 @@ contract('2nd Multicoin test', async (accounts) => {
 
   it("should put 2B Multicoin in the address parameter", async () => {
      let decimals = new BigNumber(18);
+     
      let instance = await Multicoin.new(accounts[0],{from: accounts[0]});
+     let tx = await truffleAssert.createTransactionResult(instance, instance.transactionHash);
+     
      let balance = await instance.balanceOf(accounts[0],{from: accounts[0]});
      let amount = new BigNumber(2000000000);
-     let expected =  amount.times((new BigNumber(10)).pow(decimals));
+     let expected = amount.times((new BigNumber(10)).pow(decimals));
+     
+     truffleAssert.eventEmitted(tx, 'Transfer', (ev) => {
+         return ev.from === "0x0000000000000000000000000000000000000000" && ev.to === accounts[0]  && ev.value.toString() ===  expected.toString();
+         }, 'Transfer event should be emitted during deployment');
+
+     
      assert.equal(balance.toString(),expected.toString());  
   })
 
@@ -45,14 +54,29 @@ contract('2nd Multicoin test', async (accounts) => {
   })
   
   it("should have address parameter (here '0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1' as example) as owner and not address of sender ", async () => {
+     let decimals = new BigNumber(18);
      let instance = await Multicoin.new("0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1",{from: accounts[0]});
+     let tx = await truffleAssert.createTransactionResult(instance, instance.transactionHash);
+          
      let owner_ = await instance.owner({from: accounts[0]});
      let owner = owner_.toLowerCase(); // with web3 1.0 you can use web3.utils.toChecksumAddress(value) but 1.0 is still in beta at 25/08/2018.
 
      let expected = "0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1".toLowerCase();
+     let balance = await instance.balanceOf("0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1",{from: accounts[0]});
+     
+     let amount_ = new BigNumber(2000000000);
+     let amount = amount_.times((new BigNumber(10)).pow(decimals));
+
+     truffleAssert.eventEmitted(tx, 'Transfer', (ev) => {
+         return ev.from === "0x0000000000000000000000000000000000000000" && ev.to === "0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1".toLowerCase()  && ev.value.toString() ===  amount.toString();
+         }, 'Transfer event should be emitted during deployment');
+
+
      assert.equal(typeof owner, 'string', "owner should be a string to avoid javascript number rounding");
      assert.equal(typeof expected, 'string', "expected should be a string to avoid javascript number rounding");
      assert.equal(owner, expected, "owner should be '0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1' ");
+
+     assert.equal(balance.toString(), amount, "owner '0x23F924D8E066d2733761ab5CBd7BAf53449c7eA1' should have all tokens");
   })
 
   it("owner should be able to burn coin correctly", async () => {
